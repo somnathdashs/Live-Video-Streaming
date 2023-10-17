@@ -26,4 +26,4 @@ def Video_Feed():
     return Response(Read_Video(),mimetype="multipart/x-mixed-replace; boundary=frame")
 
 
-app.run(debug=True,host="127.0.0.1",port=5245)
+app.run(debug=True,host="127.0.0.1",port=1122)
