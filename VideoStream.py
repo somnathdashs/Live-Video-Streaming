@@ -15,6 +15,7 @@ def Read_Video():
         if _:
             img=cv2.flip(frame,180)
             img=cv2.resize(img,(0,0),fx=0.5,fy=0.5)
+            cv2.imwrite("./Image.jpg",img)
             img=cv2.imencode(".jpg",img)[1].tobytes()
             yield (b"--frame\r\n"b"Content-Type: image/jpeg\r\n\r\n"+img+b"\r\n")
             time.sleep(0.1)
